@@ -1,0 +1,109 @@
+Attribute Name In English,Attribute Name In Turkish,encoding approach,comment
+Company ID,Firma,N.A.,we dropped it from the data NTNU will work on
+MNG Code,MngKod,N.A.,we dropped it from the data NTNU will work on
+Company Name,FirmaAdi,N.A.,we dropped it from the data NTNU will work on
+Ad Code,IlanKodu,Not Encoded,
+Ad Number,IlanNo,Not Encoded,
+Ad Name,IlanAdi,Not Encoded,
+First Application Date,IlkBasvuruTarihi,"days are shifted 30 days ahead in time, leap years are considered",
+Last Application date,SonBasvuruTarihi,"days are shifted 30 days ahead in time, leap years are considered",
+Candidate Reference Number,AdayRefNo,Not Encoded,
+CV Reference Number,CvRefNo,Not Encoded,
+Candidate Name,IsimSoyisim,Not Encoded,we dropped it from the data NTNU will work on
+Birth Date,DogumTarihi,"days are shifted 30 days ahead in time, leap years are considered",
+Age,Ya?,N.A.,we dropped it from the data NTNU will work on
+Gender,Cinsiyet,"X for woman, Y for Man",
+Email,Email,N.A.,we dropped it from the data NTNU will work on
+Phone Number,Telefon,N.A.,we dropped it from the data NTNU will work on
+Nationality,Uyruk,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+District,Ilce,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+City,Il,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Employment Status,CalismaDurumu,Caesar Cipher with 24 rotation,
+Overall Experience Period,Tecrübe,Not Encoded,
+Education Level,EgitimDuzeyi,"{""?lkö?retim"": 1,
+""Lise"": 2,
+""Ön Lisans"": 3,
+""Üniversite"": 4,
+""Yüksek Lisans"": 5,
+""Doktora"": 6,
+""Tan?ms?z"": pd.NA,
+}",
+Graduation Status,OgrenciDurumu,"{""Terk"": ""Z"",
+""Okuyor"": ""Y"",
+""Mezun"": ""X"",
+""Tan?ms?z"": pd.NA}",
+Disability Status,EngelDurumu,N.A.,we dropped it from the data NTNU will work on
+Driving Licience,Ehliyet,Not Encoded,
+Computer Information,BilgisayarBilgileri,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Military Status,AskerlikDurumu,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+High School Name,LiseAdi,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+High School Type,LiseTipi,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+High School Department,LiseBolumu,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+High School Graduation Date,LiseBitisTarihi,Years are shifted 3 years ahead in time,
+Language 1,Dil1,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Reading Skill 1,Okuma1,Not Encoded,
+Writting Skill 1,Yazma1,Not Encoded,
+Speaking Skill 1,Konusma1,Not Encoded,
+Language 2,Dil2,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Reading Skill 2,Okuma2,Not Encoded,
+Writting Skill 2,Yazma2,Not Encoded,
+Speaking Skill 2,konusma2,Not Encoded,
+Language 3,Dil3,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Reading Skill 3,Okuma3,Not Encoded,
+Writting Skill 3,Yazma3,Not Encoded,
+Speaking Skill 3,konusma3,Not Encoded,
+Workplace Name 1,IsYeri1,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Workplace Sector 1,IsYeri1 - Sektor,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Position Tile 1,Pozisyon1,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Start Year 1,BasYilTec1,Years are shifted 3 years ahead in time,
+Start Month 1,BasAyTec1,Not Encoded,
+End Year 1,BitYilTec1,Years are shifted 3 years ahead in time,
+End Month 1,BitAyTec1,Not Encoded,
+Workplace Name 2,IsYeri2,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Workplace Sector 2,IsYeri2 - Sektor,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Position Tile 2,Pozisyon2,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Start Year 2,BasYilTec2,Years are shifted 3 years ahead in time,
+Start Month 2,BasAyTec2,Not Encoded,
+End Year 2,BitYilTec2,Years are shifted 3 years ahead in time,
+End Month 2,BitAyTec2,Not Encoded,
+Workplace Name 3,IsYeri3,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Workplace Sector 3,IsYeri3 - Sektor,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Position Tile 3,Pozisyon3,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+Start Year 3,BasYilTec3,Years are shifted 3 years ahead in time,
+Start Month 3,BasAyTec3,Not Encoded,
+End Year 3,BitYilTec3,Years are shifted 3 years ahead in time,
+End Month 3,BitAyTec3,Not Encoded,
+University 1,Universite1,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+University Department 1,Bolum1,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+University Start Year 1,BasYil1,Years are shifted 3 years ahead in time,
+University Start Month 1,BasAy1,Not Encoded,
+University End Year 1,BitYil1,Years are shifted 3 years ahead in time,
+University End Month 1,BitAy1,Not Encoded,
+University 2,Universite2,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+University Department 2,Bolum2,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+University Start Year 2,BasYil2,Years are shifted 3 years ahead in time,
+University Start Month 2,BasAy2,Not Encoded,
+University End Year 2,BitYil2,Years are shifted 3 years ahead in time,
+University End Month 2,BitAy2,Not Encoded,
+University 3,Universite3,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+University Department 3,Bolum3,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+University Start Year 3,BasYil3,Years are shifted 3 years ahead in time,
+University Start Month 3,BasAy3,Not Encoded,
+University End Year 3,BitYil3,Years are shifted 3 years ahead in time,
+University End Month 3,BitAy3,Not Encoded,
+Cover Letter,Onyazi,Deturkishfiy + ROT24,Deturkishify means we replace Turkish characters or any non-English ones with English closer characters
+CV Reference Number,UniqueId cv,N.A.,we dropped it from the data NTNU will work on
+CV Reference Number + Candidate Reference Number,UniqueId aday,N.A.,we dropped it from the data NTNU will work on
+Is Hired?,IseAlindiMi,Not Encoded,
+Application Suitability Score,BasvuruUygunlukSkor,Not Encoded,
+Are you actively driving?,Aktif olarak araç kullan?yor musunuz?,Not Encoded,
+Do you have travel restriction?,Seyahat engeliniz var m??,Not Encoded,
+What is your level in English?,?ngilizce seviyeniz nedir?,Not Encoded,
+Which grade are you currently in University? ,Üniversite kaç?nc? s?n?fs?n?z?,Not Encoded,
+Expected Net salary range?,Net ücret beklenti aral???n?z? belirtin.,Not Encoded,
+Do you work shifts or on weekends?,Vardiyal? veya hafta sonlar? çal???r m?s?n?z?,Not Encoded,
+How many years have you been working/ worked on that position?,Kaç y?ld?r bu pozisyonda çal???yorsunuz/çal??t?n?z?,Not Encoded,
+Masked Phone Number,Maskeli Telefon,N.A.,we dropped it from the data NTNU will work on
+Longlisted/ Shortlisted/ Negative,Longlist/Shortlist/Negative,Not Encoded,
+6'l Box,6'l? Box,Not Encoded,
+Negative Explain,Olumsuz Sebepleri,Not Encoded,

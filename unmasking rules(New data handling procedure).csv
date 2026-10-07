@@ -1,0 +1,134 @@
+Column Name,Name in the dataset,Sensitive?,Identifiable?,Needed?,Should we drop?,Should we encode?,Need to mask?,Previously Encoded?,Previously Masked?,Rotated?,Previous Issues?,Reimplement?,Previous Rule
+A,ID,0,0,0,TRUE,FALSE,FALSE,0,0,0,0,FALSE,Column A should be removed as columns B and C contain the same information.
+B,MNGKOD,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,-
+C,Company Name,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"Company names that have a chance to apply will be coded with letters. In example B, Farplass Group of Companies is designated as ""B""."
+D,Ad Code,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,-
+E,Ad Number,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,,"If you encounter the code ""FP-BAKIMMU,"" then it corresponds to the number ""1,"" and if you come across ""FP-FORKLIF,"" then it represents the number ""2.""
+
+
+
+"
+F,Ad Name,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"If the component attribute is ""Bak?m Onar?m Mühendisi"" = “(A)” , if it is  ""Forklift Operatörü"" = “(B)” ."
+G,First Application Date,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Depending on the month, we'll assign it which quarter it belongs in a year, than the last two digits of the year. For example, if ""June 2021"" data is given. Since June is in the 2nd quarter, the number 2 and the number 21 will be placed side by side. The resulting data is ""221"". "
+H,Last Application Date,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Depending on the month, we'll assign it which quarter it belongs in a year, than the last two digits of the year. For example, if ""June 2021"" data is given. Since June is in the 2nd quarter, the number 2 and the number 21 will be placed side by side. The resulting data is ""221"". "
+I,Candidate Reference Number,0,1,1,FALSE,TRUE,FALSE,1,0,0,0,FALSE,"NUMBER
+ LETTER
+ 0 =“Q”
+ 1 = “W”
+ 2 = “E”
+ 3 = “R”
+ 4 = “T”
+ 5 = “Y”
+ 6 = “U”
+ 7 = “I”
+ 8 = “O”
+ 9 = “P”"
+J,CV Reference Number,0,1,1,FALSE,TRUE,FALSE,1,0,0,0,FALSE,"NUMBER
+ LETTER
+ 0 =“P”
+ 1 = “O”
+ 2 = “I”
+ 3 = “U”
+ 4 = “Y”
+ 5 = “T”
+ 6 = “R”
+ 7 = “E”
+ 8 = “W”
+ 9 = “Q”"
+K,Name,1,1,0,TRUE,FALSE,FALSE,,1,0,0,FALSE,"Names will be masked with asterisks, except for the first letter."
+L,Birth Date,1,0,1,FALSE,TRUE,FALSE,0,1,0,0,TRUE,The year of birth is indicated by the lower upper bound coding method.
+M,Gender,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"If the component attribute is ""woman"" then it's “Y”, if it's ""man"" so it's “X”"
+N,E-mail,1,1,0,TRUE,FALSE,FALSE,0,1,0,0,FALSE,"The part before ""@"" will be masked with 3 asterisks except for the first letter, no ""@"" is used, ""hotmail.com"" is changed to “2”, ""gmail.com"" is changed to “3”"
+O,Phone Number,1,1,0,TRUE,FALSE,FALSE,1,0,0,0,FALSE,"The leading ""5"" will be deleted, and the other numbers will be changed to letters by assigning letter codes. (as an example, system assigned for the I column is used.)
+
+NUMBER = LETTER
+ 0 =“Q”
+ 1 = “W”
+ 2 = “E”
+ 3 = “R”
+ 4 = “T”
+ 5 = “Y”
+ 6 = “U”
+ 7 = “I”
+ 8 = “O”
+ 9 = “P”"
+P,Citizenship,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"If the nationality is Turkey: ""A"", if it is a place other than Turkey: ""B"""
+Q,District,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Names will be masked with asterisks, except for the first two letter."
+R,City,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"Turkish plate number + 3. For example the city is ""Adana"", then it's 1 (the plate number) +3 so the result should be ""4""."
+S,Employment Situation,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"If the component attribute is ""currently working"" so its “A”, if it's ""not cirrently working""  so it's “B” "
+T,Experience (time),0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,Data is indicated by the lower upper bound coding method.
+U,Education Level,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"If the component attribute is ""high school"" so it's “M"", if it is ""Ön Lisan"" so “2M”, if it's ""Lisans"" so “3M”, if it's ""Yüksek Lisans"" so “4M”"
+V,Graduation Status,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"If the component attribute is ""Mezun"" it is “0”, ""Okuyor"" it is “-1”, ""Terk"" it is “-2”."
+W,Disability Status,1,0,1,FALSE,TRUE,FALSE,1,0,0,0,FALSE,"If the component attribute is  ""Engelli""  so it's“0”, if it's ""Engelli De?il""  so it's “1”"
+X,Driving License,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"Driving license types will be assigned to letter codes, e.g. B = ""aa"", E = ""ab"", G = ""ac""."
+Y,Computer Information,0,0,1,FALSE,FALSE,FALSE,0,0,1,1,TRUE,"Data shows, the data 100 lines beyond the dataset."
+Z,Military Status,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"If the component attribute is ""Yap?ld?"" = “4”, ""Yap?lmad?"" = “5”, Muaf =“6” ."
+AA,High School Name,0,0,1,FALSE,FALSE,FALSE,0,0,1,1,TRUE,"Data shows, the data 50 lines beyond the dataset."
+AB,High School Type,0,0,1,FALSE,FALSE,FALSE,0,0,1,1,TRUE,Data shows the data 200 lines beyond the dataset.
+AC,High School Department,0,0,1,FALSE,FALSE,FALSE,0,0,1,1,TRUE,Data shows the data 1000 lines beyond the dataset.
+AD,High School Graduation Date,0,0,1,FALSE,FALSE,FALSE,0,0,1,1,TRUE,Data shows the data 5000 lines beyond the dataset.
+AE,Language 1,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,ROT24
+AF,Reading 1,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AG,Writing 1,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AH,Speaking 1,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AI,Language 2,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,ROT24
+AJ,Reading 2,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AK,Writing 2,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AL,Speaking 2,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AM,Language 3,0,0,1,FALSE,FALSE,FALSE,,,,0,FALSE,ROT24
+AN,Reading 3,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AO,Writing 3,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AP,Speaking 3,0,0,1,FALSE,FALSE,FALSE,1,0,0,0,FALSE,"The numbers from 0 to 5 will be assigned a letter each to determine the scores. Such as; ""0""=""A"", ""1""=""S"", ""2""=""D"", ""3""=""F"", ""4""=""G"", ""5""=""H""."
+AQ,Workplace 1,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Names will be masked with asterisks, except for the first letter."
+AR,Position 1,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Positions will be enumerated starting with ""1"" up to total number of positions. "
+AS,Start Year Experience 1,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+AT,Start Month Experience 1,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+AU,End Year Experience 1,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+AV,End Month Experience 1,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+AW,Workplace 2,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Names will be masked with asterisks, except for the first letter."
+AX,Position 2,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Positions will be enumerated starting with ""1"" up to total number of positions. (Same numbers with AR)"
+AY,Start Year Experience 2,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+AZ,Start Month Experience 2,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BA,End Year Experience 2,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BB,End Month Experience 2,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BC,Workplace 3,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Names will be masked with asterisks, except for the first letter."
+BD,Position 3,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Positions will be enumerated starting with ""1"" up to total number of positions. (Same numbers with AR)"
+BE,Start Year Experience 3,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BF,Start Mount Experience 3,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BG,End Year Experience 3,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BH,End Mount Experience 3,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BI,University 1,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,Data specifying the university name will not be masked.
+BJ,Department 1,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Names will be masked with asterisks, except for the first letter."
+BK,Start Year 1,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BL,Start Month 1,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BM,End Year 1,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BN,End Month 1,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BO,University 2,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,Data specifying the university name will not be masked.
+BP,Department 2,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Names will be masked with asterisks, except for the first letter."
+BQ,Start Year 2,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BR,Start Month 2,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BS,End Year 2,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BT,End Month 2,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BU,University 3,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,Data specifying the university name will not be masked.
+BV,Department 3,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"Names will be masked with asterisks, except for the first letter."
+BW,Start Year 3,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BX,Start Month 3,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+BY,End Year 3,0,0,1,FALSE,FALSE,FALSE,1,0,0,1,TRUE,"2023 - DATA = X-> the number ""x"" (the resulting number) gives the letter of the alphabet to which that number corresponds."
+BZ,End Year 3.1,0,0,1,FALSE,FALSE,FALSE,0,1,0,1,TRUE,"The given month information is entered into the table as the quarter of the year. For example, ""November"" is the 11th month, in the 4th quarter of 12 months. So the date November is written as 4."
+CA,Cover Letter,1,1,0,TRUE,FALSE,FALSE,0,0,0,0,FALSE,
+,Workplace 2 - Industry,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Workplace 3 - Industry,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Is he/she employed?,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Application Suitability Score,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Are you actively driving?,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Do you have any travel restrictions?,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,What is your proficiency level in English?,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,What year are you in at university?,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Specify your expected net salary range.,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Do you work shifts or on weekends?,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,How many years have you been working in this position?,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Longlist/Shortlist/Negative,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,6'l? Box,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,Negative Explain,0,0,1,FALSE,FALSE,FALSE,0,0,0,0,FALSE,
+,,,,,TRUE,#VALUE!,#VALUE!,,,,,#VALUE!,
+,,,,,TRUE,#VALUE!,#VALUE!,,,,,#VALUE!,
